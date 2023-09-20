@@ -1,24 +1,41 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+/* google font link */
 
 
+
+
+/* broswer reset */
 * {
     padding: 0;
     margin: 0;
     clear: both;
 
 }
+/* broswer reset */
 
+
+
+
+/* variable manage */
 :root {
-    --color:#345A88;
+    --color: #345A88;
 }
+/* variable manage */
 
+
+
+
+/* overflow hide */
 html {
     overflow-x: hidden;
 }
+/* overflow hide */
 
+
+/* body */
 body {
     font-family: 'Kanit', sans-serif;
-    background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url(/asset/image/pattern-bg.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/asset/image/pattern-bg.jpg);
     /* height: 100vh; */
     width: 100%;
     display: flex;
@@ -29,8 +46,21 @@ body {
 
     background-position: center;
     background-attachment: fixed;
+    user-select: none;
+}
+/* body */
+
+/* date time picker */
+input#datepicker{
+    z-index: 10 !important;
 }
 
+
+
+/* date time picker*/
+
+
+/* sub-body */
 .container {
     width: 50%;
     display: flex;
@@ -39,14 +69,18 @@ body {
     flex-direction: column;
     background-color: transparent;
 }
+/* sub-body */
 
+
+
+/* form */
 form {
     display: flex;
     flex-direction: column;
     background: white;
     border: 2px solid var(--color);
     width: 500px;
-    border-radius:5px;
+    border-radius: 5px;
     padding: 5%;
     transition: all 0.5s linear;
     -webkit-transition: all 0.5s linear;
@@ -54,16 +88,72 @@ form {
     -ms-transition: all 0.5s linear;
     -o-transition: all 0.5s linear;
 }
+/* form */
 
+
+
+
+/* form input */
 input {
-    padding:5px;
+    padding: 5px;
     height: 0.9rem;
     /* max-width: auto;
     min-width: 15rem; */
     flex-grow: 1;
 }
+/* form input  */
 
 
+
+/* form heading  */
+form h1 {
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    width: 100%;
+    background: var(--color);
+    letter-spacing: 2px;
+
+}
+/* form heading */
+
+
+
+/* required color */
+form label span {
+    color: red;
+}
+/* requried color */
+
+
+
+/* 2 section layout  */
+.form-group {
+    display: flex;
+    width: 100%;
+    gap: 2%;
+}
+
+.fname,
+.lname {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 0%;
+
+}
+
+.f-name,
+.f-name {
+    flex-grow: 1;
+}
+
+/* 2 section layout design */
+
+
+
+
+/* btn section */
 input[type='submit'] {
     flex-grow: 1;
     background: var(--color);
@@ -77,44 +167,14 @@ input[type='submit'] {
     -o-border-radius: 5px;
     color: white;
 }
-form h1 {
-    text-align: center;
-    text-transform: uppercase;
-    color: white;
-    width: 100%;
-    background: var(--color);
-    letter-spacing: 2px;
 
-}
-
-form label span {
-    color: red;
-}
-
-
-
-.form-group {
-    display: flex;
-  width: 100%;
-    gap: 2%;
-}
-
-.fname,.lname {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    gap: 0%;
-
-}
-
-.f-name,.f-name {
-    flex-grow: 1;
-}
+/* btn section */
 
 
 
 
-@media  (max-width:600px) {
+/* responsive section */
+@media (max-width:600px) {
     form {
         width: 300px;
     }
@@ -123,3 +183,5 @@ form label span {
         flex-direction: column;
     }
 }
+
+/* sesponsive section */

@@ -1,110 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV form</title>
     <link rel="stylesheet" href="asset/css/style.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
 </head>
+
 <body>
     <div class="container">
         <form action="" method="post" enctype="multipart/form-data">
-                        <h1>CV form</h1>
-                        <br>
+            <h1>CV form</h1>
+            <br>
 
-                            <div class="form-group">
+            <div class="form-group">
 
-                                <!-- name section -->
-                                <div class="fname">
-                                    <label for="name">First Name <span>*</span></label>
-                                    <input type="text" class="f-name" id="name" name="fname" required>
-                                </div>
-                                <div class="lname">
-                                    <label for="name">Last Name <span>*</span> </label>
-                                    <input type="text" class="l-name" id="name" name="lname" required>
-                                </div>
-                   
-                            </div>
-                            <!-- name section -->
+                <!-- name section -->
+                <div class="fname">
+                    <label for="name">First Name <span>*</span></label>
+                    <input type="text" class="f-name"  id="name" name="fname" required>
+                </div>
+                <div class="lname">
+                    <label for="name">Last Name <span>*</span> </label>
+                    <input type="text" class="l-name"  id="name" name="lname" required>
+                </div>
 
-                            <br>
+            </div>
+            <!-- name section -->
 
-                            <!-- brith section -->
-                            <div class="brith" style="margin-top:5px ;">
-                                <label for="name">Brith Date <span>*</span></label>
-                            <input type="date" name="date" id="date" required>
-                            </div>
-                            <!-- brith section -->
+            <br>
 
-                            <br>
-                            <!-- present address section -->
-                            <div class="lname">
-                                <label for="name">present Address <span>*</span> </label>
-                                <input type="text" class="l-name" id="name" name="lname" required>
-                            </div>
-                            <!-- pesent address section -->
-                            <br>
-                            
-                            <!-- parmanent address -->
-                            <div class="lname">
-                                <label for="name">Parmanent Address <span>*</span> </label>
-                                <input type="text" class="l-name" id="name" name="lname" required>
-                            </div>
-                            <!-- parmanent address -->
+            <!-- brith section -->
+            <div class="brith" style="margin-top:5px ;">
+               
+            </div>
 
-                            <br>
+            <div class="lname">
+                <label for="name">Brith Date <span>*</span></label>
+                <input type="text" id="datepicker"  name="date" required>
+            </div>
+            <!-- brith section -->
 
-                            <!-- city and state -->
-                            <div class="form-group">
-                                <div class="fname">
-                                    <label for="name">City <span>*</span></label>
-                                    <input type="text" class="f-name" id="name" name="fname" required>
-                                </div>
-                                <div class="lname">
-                                    <label for="name">State <span>*</span> </label>
-                                    <input type="text" class="l-name" id="name" name="lname" required>
-                                </div>
-                   
-                            </div>
-                            <!-- city and state -->
+            <br>
+            <!-- present address section -->
+            <div class="lname">
+                <label for="name">present Address <span>*</span> </label>
+                <input type="text" class="l-name"  id="name" name="lname" required>
+            </div>
+            <!-- pesent address section -->
+            <br>
 
-                            <br>
+            <!-- parmanent address -->
+            <div class="lname">
+                <label for="name">Parmanent Address <span>*</span> </label>
+                <input type="text" class="l-name" id="name" name="lname" required>
+            </div>
+            <!-- parmanent address -->
 
-                            <!-- post code  -->
-                            <div class="lname">
-                                <label for="name">Post Code <span>*</span> </label>
-                                <input type="text" class="l-name" id="name" name="lname" required>
-                            </div>
-                            <!-- post code -->
-                            <br>
+            <br>
 
-                            <!-- parmanent address -->
-                            <div class="lname">
-                                <label for="name">Phone Number <span>*</span> </label>
-                                <input type="text" class="l-name" id="name" name="lname" required>
-                            </div>
-                            <!-- parmanent address -->
-                            <br>
+            <!-- city and state -->
+            <div class="form-group">
+                <div class="fname">
+                    <label for="name">City <span>*</span></label>
+                    <input type="text" class="f-name" id="name" name="fname" required>
+                </div>
+                <div class="lname">
+                    <label for="name">State <span>*</span> </label>
+                    <input type="text" class="l-name" id="name" name="lname" required>
+                </div>
+
+            </div>
+            <!-- city and state -->
+
+            <br>
+
+            <!-- post code  -->
+            <div class="lname">
+                <label for="name">Post Code <span>*</span> </label>
+                <input type="text" class="l-name" id="name" name="lname" required>
+            </div>
+            <!-- post code -->
+            <br>
+
+            <!-- parmanent address -->
+            <div class="lname">
+                <label for="name">Phone Number <span>*</span> </label>
+                <input type="text" class="l-name" id="name" name="lname" required>
+            </div>
+            <!-- parmanent address -->
+            <br>
 
 
-                            <div class="lname">
-                                <label for="name">E-mail Address <span>*</span> </label>
-                                <input type="text" class="l-name" id="name" name="lname" required>
-                            </div>
+            <div class="lname">
+                <label for="name">E-mail Address <span>*</span> </label>
+                <input type="text" class="l-name" id="name" name="lname" required>
+            </div>
 
-                            <br>
-                            <div class="lname">
-                                <label for="name">Upload Resume <span>*</span> </label>
-                                <input type="file" class="l-name" id="name" name="lname"  required>
-                            </div>
-                            <br>
+            <br>
+            <div class="lname">
+                <label for="name">Upload Resume <span>*</span> </label>
+                <input type="file" class="l-name" id="name" name="lname" required>
+            </div>
+            <br>
 
-                            <input type="submit" value="Submit Resume" class="l-name" required>
+
+
+            <input type="submit" value="Submit Resume" class="l-name" required>
 
 
 
         </form>
     </div>
-    
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script>
+        $(function () {
+            $("#datepicker").datepicker();
+        });
+    </script>
+
 </body>
+
 </html>
