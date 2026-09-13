@@ -2,128 +2,215 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV form</title>
-    <link rel="stylesheet" href="asset/css/style.css">
-    <link rel="stylesheet" href="asset/css/jquery-ui.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Application Dossier — CV Submission</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="asset/css/style.css">
+  <link rel="stylesheet" href="asset/css/jquery-ui.min.css">
+
 </head>
 
 <body>
-    <div class="container">
-        <form action="" method="post" enctype="multipart/form-data">
-            <h1>CV form</h1>
-            <br>
 
-            <div class="form-group">
+  <div class="sheet">
 
-                <!-- name section -->
-                <div class="fname">
-                    <label for="name">First Name <span>*</span></label>
-                    <input type="text" class="f-name"  id="name" name="fname" required>
-                </div>
-                <div class="lname">
-                    <label for="name">Last Name <span>*</span> </label>
-                    <input type="text" class="l-name"  id="name" name="lname" required>
-                </div>
-
-            </div>
-            <!-- name section -->
-
-            <br>
-
-            <!-- brith section -->
-            <div class="brith" style="margin-top:5px ;">
-               
-            </div>
-
-            <div class="lname">
-                <label for="name">Brith Date <span>*</span></label>
-                <input type="text" id="datepicker"  name="date" required>
-            </div>
-            <!-- brith section -->
-
-            <br>
-            <!-- present address section -->
-            <div class="lname">
-                <label for="name">present Address <span>*</span> </label>
-                <input type="text" class="l-name"  id="name" name="lname" required>
-            </div>
-            <!-- pesent address section -->
-            <br>
-
-            <!-- parmanent address -->
-            <div class="lname">
-                <label for="name">Parmanent Address <span>*</span> </label>
-                <input type="text" class="l-name" id="name" name="lname" required>
-            </div>
-            <!-- parmanent address -->
-
-            <br>
-
-            <!-- city and state -->
-            <div class="form-group">
-                <div class="fname">
-                    <label for="name">City <span>*</span></label>
-                    <input type="text" class="f-name" id="name" name="fname" required>
-                </div>
-                <div class="lname">
-                    <label for="name">State <span>*</span> </label>
-                    <input type="text" class="l-name" id="name" name="lname" required>
-                </div>
-
-            </div>
-            <!-- city and state -->
-
-            <br>
-
-            <!-- post code  -->
-            <div class="lname">
-                <label for="name">Post Code <span>*</span> </label>
-                <input type="text" class="l-name" id="name" name="lname" required>
-            </div>
-            <!-- post code -->
-            <br>
-
-            <!-- parmanent address -->
-            <div class="lname">
-                <label for="name">Phone Number <span>*</span> </label>
-                <input type="text" class="l-name" id="name" name="lname" required>
-            </div>
-            <!-- parmanent address -->
-            <br>
-
-
-            <div class="lname">
-                <label for="name">E-mail Address <span>*</span> </label>
-                <input type="text" class="l-name" id="name" name="lname" required>
-            </div>
-
-            <br>
-            <div class="lname">
-                <label for="name">Upload Resume <span>*</span> </label>
-                <input type="file" class="l-name" id="name" name="lname" required>
-            </div>
-            <br>
-
-
-
-            <input type="submit" value="Submit Resume" class="l-name" required>
-
-
-
-        </form>
+    <div class="masthead">
+      <svg class="seal" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="26" cy="26" r="25" stroke="#9c7a3c" stroke-width="1.4" />
+        <circle cx="26" cy="26" r="19" stroke="#9c7a3c" stroke-width="1" />
+        <path d="M18 30V20.5L26 25.5L34 20.5V30" stroke="#1c2430" stroke-width="1.5" stroke-linecap="round"
+          stroke-linejoin="round" />
+      </svg>
+      <div>
+        <h1>Application Form</h1>
+        <p>Complete each section to submit your CV for review.</p>
+      </div>
     </div>
 
+    <div class="card">
+
+      <div class="rail">
+        <div class="rail-eyebrow">Application progress</div>
+        <ul class="steps" id="stepList">
+          <li class="step" data-step="1">
+            <span class="step-num">1</span>
+            <div class="step-title">Personal details</div>
+            <div class="step-sub">Name &amp; date of birth</div>
+          </li>
+          <li class="step" data-step="2">
+            <span class="step-num">2</span>
+            <div class="step-title">Address</div>
+            <div class="step-sub">Present &amp; permanent</div>
+          </li>
+          <li class="step" data-step="3">
+            <span class="step-num">3</span>
+            <div class="step-title">Contact</div>
+            <div class="step-sub">Phone &amp; email</div>
+          </li>
+          <li class="step" data-step="4">
+            <span class="step-num">4</span>
+            <div class="step-title">Documents</div>
+            <div class="step-sub">Upload &amp; review</div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="stage">
+        <form id="cvForm" novalidate>
+
+          <!-- STEP 1 -->
+          <div class="panel active" data-panel="1">
+            <div class="panel-head">
+              <h2>Personal details</h2>
+              <p>Let's start with who you are.</p>
+            </div>
+            <div class="field-grid">
+              <div class="field">
+                <label for="fname">First name<span class="req">*</span></label>
+                <input type="text" id="fname" name="fname" required autocomplete="given-name">
+                <div class="error-text">Please enter your first name.</div>
+              </div>
+              <div class="field">
+                <label for="lname">Last name<span class="req">*</span></label>
+                <input type="text" id="lname" name="lname" required autocomplete="family-name">
+                <div class="error-text">Please enter your last name.</div>
+              </div>
+              <div class="field span-2">
+                <label for="dob">Date of birth<span class="req">*</span></label>
+                <input type="date" id="dob" name="dob" required autocomplete="bday">
+                <div class="error-text">Please enter your date of birth.</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- STEP 2 -->
+          <div class="panel" data-panel="2">
+            <div class="panel-head">
+              <h2>Address</h2>
+              <p>Where can correspondence reach you?</p>
+            </div>
+            <div class="field-grid single">
+              <div class="field">
+                <label for="present">Present address<span class="req">*</span></label>
+                <input type="text" id="present" name="present" required autocomplete="street-address">
+                <div class="error-text">Please enter your present address.</div>
+              </div>
+              <div class="field">
+                <label for="permanent">Permanent address<span class="req">*</span></label>
+                <input type="text" id="permanent" name="permanent" required>
+                <div class="error-text">Please enter your permanent address.</div>
+                <div class="checkline">
+                  <input type="checkbox" id="sameAddr">
+                  <label for="sameAddr" style="margin:0; font-weight:400;">Same as present address</label>
+                </div>
+              </div>
+            </div>
+            <div class="field-grid" style="margin-top:20px;">
+              <div class="field">
+                <label for="city">City<span class="req">*</span></label>
+                <input type="text" id="city" name="city" required autocomplete="address-level2">
+                <div class="error-text">Please enter your city.</div>
+              </div>
+              <div class="field">
+                <label for="state">State<span class="req">*</span></label>
+                <input type="text" id="state" name="state" required autocomplete="address-level1">
+                <div class="error-text">Please enter your state.</div>
+              </div>
+              <div class="field">
+                <label for="postcode">Post code<span class="req">*</span></label>
+                <input type="text" id="postcode" name="postcode" required autocomplete="postal-code">
+                <div class="error-text">Please enter your post code.</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- STEP 3 -->
+          <div class="panel" data-panel="3">
+            <div class="panel-head">
+              <h2>Contact</h2>
+              <p>How should we reach out about your application?</p>
+            </div>
+            <div class="field-grid">
+              <div class="field">
+                <label for="phone">Phone number<span class="req">*</span></label>
+                <input type="tel" id="phone" name="phone" required autocomplete="tel" placeholder="+880 1XX XXX XXXX">
+                <div class="error-text">Please enter a valid phone number.</div>
+              </div>
+              <div class="field">
+                <label for="email">Email address<span class="req">*</span></label>
+                <input type="email" id="email" name="email" required autocomplete="email" placeholder="you@example.com">
+                <div class="error-text">Please enter a valid email address.</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- STEP 4 -->
+          <div class="panel" data-panel="4">
+            <div class="panel-head">
+              <h2>Documents &amp; review</h2>
+              <p>Attach your resume, then confirm your details below.</p>
+            </div>
+
+            <div class="field span-2" style="margin-bottom:24px;">
+              <label>Upload resume<span class="req">*</span></label>
+              <div class="dropzone" id="dropzone">
+                <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                  <path d="M12 15V3m0 0l-4 4m4-4l4 4" />
+                  <path d="M4 15v3a2 2 0 002 2h12a2 2 0 002-2v-3" />
+                </svg>
+                <p>Drag your file here, or click to browse</p>
+                <span>PDF or Word, up to 10MB</span>
+              </div>
+              <div class="file-chip" id="fileChip">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                  <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
+                  <path d="M14 2v6h6" />
+                </svg>
+                <span class="fname" id="fileName"></span>
+                <span class="fsize" id="fileSize"></span>
+                <button type="button" id="fileRemove" aria-label="Remove file">✕</button>
+              </div>
+              <div class="error-text" id="resumeError">Please attach your resume.</div>
+            </div>
+
+            <dl class="summary" id="summary"></dl>
+          </div>
+
+          <div class="stage-nav">
+            <button type="button" class="btn-ghost" id="backBtn" disabled>Back</button>
+            <button type="button" class="btn-primary" id="nextBtn">Continue</button>
+          </div>
+
+        </form>
+
+        <!-- success -->
+        <div class="success-view" id="successView">
+          <div class="success-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M20 6L9 17l-5-5" />
+            </svg>
+          </div>
+          <h2>Application received</h2>
+          <p>Thank you — your CV has been submitted. Our hiring team will review your dossier and get in touch if
+            there's a match.</p>
+          <span class="ref-tag" id="refTag">Reference —</span>
+        </div>
+
+      </div>
+    </div>
+  </div>
 
 
-    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-    <script src="asset/js/jquery-ui.min.js"></script>
-    <script>
-        $(function () {
-            $("#datepicker").datepicker();
-        });
-    </script>
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="asset/js/jquery-ui.min.js"></script>
+  <script src="asset/js/main.js"></script>
+
 
 </body>
 
